@@ -9,8 +9,8 @@ public class SinglyLinkedList {
     }
 
     // Return a statement if the list is empty
-    private void isEmpty() {
-        if(head == null) {
+    public void isEmpty() {
+        if(this.head == null) {
             System.out.println("Empty list");
         }
     }
@@ -18,7 +18,7 @@ public class SinglyLinkedList {
     // Adds an integer to the end of the list
     public void add(int value) {
         Node newNode = new Node(value);
-        if(head == null) {
+        if(this.head == null) {
             this.head = newNode;
             printValues();
         } 
@@ -34,14 +34,14 @@ public class SinglyLinkedList {
 
     // Removes the last integer of the list
     public void remove() {
-        Node runner = head;
+        Node runner = this.head;
         int temp;
-        if(head == null) {
+        if(runner == null) {
             isEmpty();
         }
-        if(head.next == null) {
-            temp = head.value;
-            head = null;
+        if(runner.next == null) {
+            temp = runner.value;
+            runner = null;
             printValues();
         }
         else {
@@ -56,7 +56,7 @@ public class SinglyLinkedList {
 
     // Displays the list
     public void printValues() {
-        if(head == null) {
+        if(this.head == null) {
             isEmpty();
         }
         Node runner = this.head;
