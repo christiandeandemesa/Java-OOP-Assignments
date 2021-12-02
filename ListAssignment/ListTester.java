@@ -1,7 +1,10 @@
 public class ListTester {
     public static void main(String[] args) {
 
+        // New instance
         SinglyLinkedList sll = new SinglyLinkedList();
+
+        // Tests
         sll.add(3);
         sll.add(4);
         sll.add(10);

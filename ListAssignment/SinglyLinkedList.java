@@ -1,6 +1,9 @@
 public class SinglyLinkedList {
 
+    // Method variable
     public Node head;
+
+    // Constructor
     public SinglyLinkedList() {
         this.head = null;
     }
