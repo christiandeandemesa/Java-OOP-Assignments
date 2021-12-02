@@ -32,13 +32,24 @@ public class SinglyLinkedList {
         }
     }
 
-    // Removes the first integer of the list
+    // Removes the last integer of the list
     public void remove() {
+        Node runner = head;
+        int temp;
         if(head == null) {
             isEmpty();
         }
+        if(head.next == null) {
+            temp = head.value;
+            head = null;
+            printValues();
+        }
         else {
-            this.head = this.head.next;
+            while(runner.next.next != null) {
+                runner = runner.next;
+            }
+            temp = runner.next.value;
+            runner.next = null;
             printValues();
         }
     }
